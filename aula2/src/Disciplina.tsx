@@ -1,16 +1,15 @@
-import './Disciplina.css'
+import "./Disciplina.css";
 
-function Disciplina() {
-  return (
-    <div>
-      <div>
-        DCC 207
-      </div>
-      <div>
-        Desenvolvimento web front-end
-      </div>
-    </div>
-  )
+type DisciplinaProps = {
+    codigo: string;
+    nome: string;
 }
 
-export default Disciplina
+export default function Disciplina({codigo, nome}: DisciplinaProps) {
+    return (
+        <div className="disciplina">
+            <h1>{codigo}</h1>
+            <h2>{nome}</h2>
+        </div>
+    )
+}
